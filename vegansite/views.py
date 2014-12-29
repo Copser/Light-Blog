@@ -7,6 +7,7 @@ from django.template import Template
 from django.utils._os import safe_join
 
 
+
 def get_page_or_404(name):
     """Return page content as a Django template or raise 404 arror."""
     try:
@@ -14,7 +15,7 @@ def get_page_or_404(name):
     except ValueError:
         raise Http404('Page Not Found')
     else:
-        if not os.path.exist(file_path):
+        if not os.path.exists(file_path):
             raise Http404('Page Not Found')
 
 
@@ -37,4 +38,3 @@ def page(request, slug='index'):
     return render(request, 'page.html', context)
 
 
-          
