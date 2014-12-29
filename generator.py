@@ -1,4 +1,4 @@
-
+import os
 import sys
 
 from django.conf import settings 
@@ -16,6 +16,7 @@ settings.configure(
         'vegansite',
     ),
     STATIC_URL = '/static/',
+    SITE_PAGES_DORECTORY=os.path.join(BASE_DIR, 'pages'),
 )       
 
 
