@@ -2,7 +2,7 @@
 
 {% block title %}{{ block.super }} - {{ slug|capfirst }}{% endblock %}
 
-{% block body-id %}{% endblock %}
+{% block body-id %}{{ slug|slugify }}{% endblock %}
 
 {% block content %}
     {% include page %}
